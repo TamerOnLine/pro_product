@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إضافة منتج جديد</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>➕ إضافة منتج جديد</h1>
+    <form action="{{ url_for('main.admin_add_product') }}" method="post">
+        <label>اسم المنتج:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>السعر:</label><br>
+        <input type="number" name="price" step="0.01" required><br><br>
+
+        <label>الوصف:</label><br>
+        <textarea name="description"></textarea><br><br>
+
+        <label>اسم الصورة (مثال: watch.jpg):</label><br>
+        <input type="text" name="image"><br><br>
+
+        <label>المواصفات:</label><br>
+        <textarea name="specs"></textarea><br><br>
+
+        <button type="submit">📤 حفظ المنتج</button>
+    </form>
+</body>
+</html>

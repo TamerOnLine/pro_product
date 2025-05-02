@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>🛠 لوحة تحكم المسؤول</h1>
+    <ul>
+        <li><a href="{{ url_for('main.admin_add_product') }}">➕ إضافة منتج جديد</a></li>
+        <li><a href="/">🏠 العودة للواجهة العامة</a></li>
+    </ul>
+</body>
+</html>
