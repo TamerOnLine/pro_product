@@ -116,6 +116,10 @@ def reset_db():
     db.create_all()
     return "✅ تم حذف كل الجداول وإعادة إنشائها بالكامل.", 200
 
+@main_routes.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('main.login'))
 
 
 @main_routes.route('/login', methods=['GET', 'POST'])
