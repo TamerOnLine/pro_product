@@ -12,6 +12,7 @@ class Product(db.Model):
     description = db.Column(db.Text)
     image = db.Column(db.String(200))  
     specs = db.Column(db.Text)         
-
+    product_code = db.Column(db.String(20), unique=True, nullable=False)
+    
     def __repr__(self):
         return f'<Product {self.name}>'
